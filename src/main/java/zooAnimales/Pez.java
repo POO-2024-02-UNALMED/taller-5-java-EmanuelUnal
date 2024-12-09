@@ -35,7 +35,7 @@ public class Pez extends Animal{
         salmon.setGenero(genero);
         salmon.setColorEscamas("rojo");
         salmon.setCantidadAletas(6);
-        salmon.setHabitat("océano");
+        salmon.setHabitat("oceano");
         Pez.salmones++;
         return(salmon);
     }
@@ -47,7 +47,7 @@ public class Pez extends Animal{
         bacalao.setGenero(genero);
         bacalao.setColorEscamas("gris");
         bacalao.setCantidadAletas(6);
-        bacalao.setHabitat("océano");
+        bacalao.setHabitat("oceano");
         Pez.bacalaos++;
         return(bacalao);
     }
