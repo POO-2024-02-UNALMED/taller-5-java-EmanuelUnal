@@ -31,7 +31,7 @@ public class Ave extends Animal{
         halcon.setNombre(nombre);
         halcon.setEdad(edad);
         halcon.setGenero(genero);
-        halcon.setColorPlumas("café glorioso");
+        halcon.setColorPlumas("cafe glorioso");
         halcon.setHabitat("montañas");
         Ave.halcones++;
         return(halcon);
