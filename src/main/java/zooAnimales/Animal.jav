@@ -1,4 +1,5 @@
 package zooAnimales;
+import gestion.*;
 
 public class Animal{
     private static int totalAnimales;
@@ -9,7 +10,7 @@ public class Animal{
     private Zona zona;
 
     public Animal(){
-        totalAnimales++;
+        Animal.totalAnimales++;
     }
     public Animal(String nombre, int edad, String habitat, String genero, Zona zona){
         this.nombre = nombre;
@@ -17,7 +18,7 @@ public class Animal{
 		this.habitat = habitat;
 		this.genero = genero;
 		this.zona = zona;
-		totalAnimales++;
+		Animal.totalAnimales++;
     }
 
     
@@ -25,12 +26,12 @@ public class Animal{
         return("desplazarse");
     }
 
-    public void totalPorTipo(){
-        int mamifero = Mamifero.listado.size()
-        int ave = Aves.listado.size()
-        int anfibio = Anfibio.listado.size()
-        int reptil = Reptil.listado.size()
-        int pez = Pez.listado.size()
+    public static String totalPorTipo(){
+        int mamifero = Mamifero.cantidadMamiferos();
+        int ave = Ave.cantidadAves();
+        int anfibio = Anfibio.cantidadAnfibios();
+        int reptil = Reptil.cantidadReptiles();
+        int pez = Pez.cantidadPeces();
 
         return("Mamíferos: "+mamifero + "\nAves: "+ave+ "\nReptiles:"+reptil+ "\nPeces: "+pez+ "\nAnfibios"+anfibio);
     }
@@ -45,10 +46,10 @@ public class Animal{
     }
 
     public static int getTotalAnimales(){
-        return(this.totalAnimales);
+        return(Animal.totalAnimales);
     }
     public static void setTotalAnimales(int totalAnimales){
-        this.totalAnimales = totalAnimales;
+        Animal.totalAnimales = totalAnimales;
     }
 
     public String getNombre(){

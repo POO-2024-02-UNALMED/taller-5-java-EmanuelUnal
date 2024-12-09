@@ -1,4 +1,5 @@
 package zooAnimales;
+import java.util.ArrayList;
 
 public class Ave extends Animal{
     private ArrayList<Ave> listado = new ArrayList<>();
@@ -32,7 +33,7 @@ public class Ave extends Animal{
         halcon.setGenero(genero);
         halcon.setColorPlumas("café glorioso");
         halcon.setHabitat("montañas");
-        halcones++;
+        Ave.halcones++;
         return(halcon);
     }
 
@@ -43,11 +44,18 @@ public class Ave extends Animal{
         aguila.setGenero(genero);
         aguila.setColorPlumas("blanco y amarillo");
         aguila.setHabitat("montañas");
-        aguilas++;
+        Ave.aguilas++;
         return(aguila);
         
     }
     
+    public void setListado(ArrayList<Ave> listado){
+        this.listado=listado;
+    }
+
+    public ArrayList<Ave> getListado() {
+        return this.listado;
+    }
 
     public String getColorPlumas(){
         return(this.colorPlumas);

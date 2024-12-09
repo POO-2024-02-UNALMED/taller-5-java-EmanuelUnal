@@ -1,4 +1,5 @@
 package gestion;
+import java.util.ArrayList;
 
 public class Zoologico {
     private String nombre;
@@ -13,7 +14,7 @@ public class Zoologico {
     } 
 
     public void agregarZonas(Zona zona){
-        zonas.add(zona)
+        this.zonas.add(zona);
     }
 
     public int cantidadTotalAnimales(){
