@@ -36,7 +36,7 @@ public class Animal{
         int pez = Pez.cantidadPeces();
 
 
-        return("Mamiferos: "+mamifero + "\nAves: "+ave+ "\nReptiles:"+reptil+ "\nPeces: "+pez+ "\nAnfibios: "+anfibio);
+        return("Mamiferos: "+mamifero + "\nAves: "+ave+ "\nReptiles: "+reptil+ "\nPeces: "+pez+ "\nAnfibios: "+anfibio);
     }
     @Override
     public String toString(){
