@@ -1,5 +1,5 @@
 package zooAnimales;
-import gestion.*;
+import gestion.Zona;
 
 public class Animal{
     private static int totalAnimales;
@@ -20,7 +20,9 @@ public class Animal{
 		this.zona = zona;
 		Animal.totalAnimales++;
     }
-
+    public Animal(String nombre, int edad, String habitat, String genero){
+        this(nombre,edad,habitat,genero,null);
+    }
     
     public String movimiento(){
         return("desplazarse");
@@ -35,7 +37,7 @@ public class Animal{
 
         return("Mamíferos: "+mamifero + "\nAves: "+ave+ "\nReptiles:"+reptil+ "\nPeces: "+pez+ "\nAnfibios"+anfibio);
     }
-
+    @Override
     public String toString(){
         if (this.zona != null) {
 			return ("Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero+", la zona en la que me ubico es "+zona.getNombre()+" en el "+zona.getZoo().getNombre());

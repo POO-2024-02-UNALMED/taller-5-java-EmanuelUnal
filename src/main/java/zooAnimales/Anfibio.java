@@ -19,7 +19,7 @@ public class Anfibio extends Animal{
 		listado.add(this);
     }
     
-    @override
+    @Override
     public String movimiento(){
         return("saltar");
     }
@@ -53,12 +53,12 @@ public class Anfibio extends Animal{
         return(salamandra);
     }
 
-	public void setListado(ArrayList<Anfibio> listado){
-        this.listado=listado;
+	public static void setListado(ArrayList<Anfibio> listado){
+        Anfibio.listado=listado;
     }
 
-    public ArrayList<Anfibio> getListado() {
-        return this.listado;
+    public static ArrayList<Anfibio> getListado() {
+        return (Anfibio.listado);
     }
     public String getColorPiel(){
         return(this.colorPiel);
