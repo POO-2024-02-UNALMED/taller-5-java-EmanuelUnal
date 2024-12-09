@@ -2,8 +2,8 @@ package zooAnimales;
 
 public class Reptil extends Animal{
     private ArrayList<Reptil> listado = new ArrayList<>();
-    public int iguanas;
-    public int serpientes;
+    public static int iguanas;
+    public static int serpientes;
     private String colorEscamas;
     private int largoCola;
 
@@ -21,13 +21,36 @@ public class Reptil extends Animal{
     public String movimiento(){
         return("reptar");
     }
+    
+    public static int cantidadReptiles(){
+		int totl = listado.size();
+        return(totl);
+    }
 
-    public Reptil[] getListado(){
-        return(this.listado);
+	public static Reptil crearIguana(String nombre, int edad, String genero){
+		Reptil iguana = new Reptil();
+        iguana.setNombre(nombre);
+        iguana.setEdad(edad);
+        iguana.setGenero(genero);
+        iguana.setColorEscamas("verde");
+        iguana.setLargoCola(3);
+        iguana.setHabitat("humedal");
+        iguanas++;
+        return(iguana);
     }
-    public void setListado(Reptil[] listado){
-        this.listado = listado;
+
+    public static Reptil crearSerpientes(String nombre, int edad, String genero){
+		Reptil serpiente = new Reptil();
+        serpiente.setNombre(nombre);
+        serpiente.setEdad(edad);
+        serpiente.setGenero(genero);
+        serpiente.setColorEscamas("blanco");
+        serpiente.setLargoCola(1);
+        serpiente.setHabitat("jungla");
+        serpientes++;
+        return(serpiente);
     }
+    
 
     public String getColorEscamas(){
         return(this.colorEscamas);
@@ -43,19 +66,4 @@ public class Reptil extends Animal{
         this.largoCola = largoCola;
     }
 
-    public void cantidadReptiles(){
-
-    }
-
-    public void movimiento(){
-
-    }
-
-    public void crearIguana(){
-
-    }
-
-    public void crearSerpientes(){
-
-    }
 }

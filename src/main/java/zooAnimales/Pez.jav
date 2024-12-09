@@ -2,8 +2,8 @@ package zooAnimales;
 
 public class Pez extends Animal{
     private ArrayList<Pez> listado = new ArrayList<>();
-    public int salmones;
-    public int bacalaos;
+    public static int salmones;
+    public static int bacalaos;
     private String colorEscamas;
     private int cantidadAletas;
 
@@ -21,12 +21,34 @@ public class Pez extends Animal{
     public String movimiento(){
         return("nadar");
     }
-
-    public Pez[] getListado(){
-        return(this.listado);
+    
+	public static int cantidadPeces(){
+		int totl = listado.size();
+        return(totl);
     }
-    public void setListado(Pez[] listado){
-        this.listado = listado;
+
+    public static Pez crearSalmon(String nombre, int edad, String genero){
+		Pez salmon = new Pez();
+        salmon.setNombre(nombre);
+        salmon.setEdad(edad);
+        salmon.setGenero(genero);
+        salmon.setColorEscamas("rojo");
+        salmon.setCantidadAletas(6);
+        salmon.setHabitat("océano");
+        salmones++;
+        return(salmon);
+    }
+
+    public static Pez crearBacalao(String nombre, int edad, String genero){
+		Pez bacalao = new Pez();
+        bacalao.setNombre(nombre);
+        bacalao.setEdad(edad);
+        bacalao.setGenero(genero);
+        bacalao.setColorEscamas("gris");
+        bacalao.setCantidadAletas(6);
+        bacalao.setHabitat("océano");
+        bacalaos++;
+        return(bacalao);
     }
 
     public String getColorEscamas(){
@@ -41,21 +63,5 @@ public class Pez extends Animal{
     }
     public void setCantidadAletas(int cantidadAletas){
         this.cantidadAletas = cantidadAletas;
-    }
-
-    public void cantidadPeces(){
-
-    }
-
-    public void movimiento(){
-
-    }
-
-    public void crearSalmon(){
-
-    }
-
-    public void crearBacalao(){
-
     }
 }

@@ -2,8 +2,8 @@ package zooAnimales;
 
 public class Ave extends Animal{
     private ArrayList<Ave> listado = new ArrayList<>();
-    public int halcones;
-    public int aguilas;
+    public static int halcones;
+    public static int aguilas;
     private String colorPlumas;
 
     public Ave(){
@@ -48,29 +48,11 @@ public class Ave extends Animal{
         
     }
     
-    public Ave[] getListado(){
-        return(this.listado);
-    }
-    public void setListado(Ave[] listado){
-        this.listado = listado;
-    }
 
     public String getColorPlumas(){
         return(this.colorPlumas);
     }
     public void setColorPlumas(String colorPlumas){
         this.colorPlumas = colorPlumas;
-    }
-
-    public void cantidadAves(){
-
-    }
-
-    public void crearHalcon(){
-
-    }
-
-    public void crearAguila(){
-
     }
 }
